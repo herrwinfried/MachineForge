@@ -1,0 +1,54 @@
+# MachineForge Logs
+logs/
+*.log
+
+# VS Code and derivative editors
+.vscode/
+.vscode-test/
+*.code-workspace
+.history/
+.ionide/
+
+# Visual Studio / Visual Studio Code / Visual Studio Community
+.vs/
+*.suo
+*.user
+*.userosv
+*.sln.docstates
+*.userprefs
+
+# JetBrains IDEs (IntelliJ, PyCharm, WebStorm, Rider, CLion, GoLand, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse & NetBeans
+.eclipse/
+.project
+.classpath
+.settings/
+nbproject/
+
+# Zed Editor & Helix & Nova
+.zed/
+.helix/
+.nova/
+
+# Sublime Text & Atom
+*.sublime-project
+*.sublime-workspace
+.atom/
+
+# OS / System specific files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
