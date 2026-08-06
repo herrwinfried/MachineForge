@@ -1,0 +1,7 @@
+@{
+    Packages = @(
+        "armourycrate"
+        "myasus"
+        "glidex"
+    )
+}
