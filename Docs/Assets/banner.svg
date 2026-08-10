@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" role="img">
+  <title>MachineForge</title>
+  <style>
+    .dark { display: none; }
+    @media (prefers-color-scheme: dark) {
+      .light { display: none; }
+      .dark { display: block; }
+    }
+  </style>
+  <rect width="760" height="180" fill="none"/>
+  <g class="light">
+    <g transform="translate(30 25)">
+      <rect width="130" height="130" rx="28" fill="#18181B"/>
+      <path d="M30 98V32h17l19 30 19-30h17v66H85V61L66 91 47 61v37H30Z" fill="#F4F4F5"/>
+      <path d="M112 32H70v15h27v12H74v14h23v25h15V73H85V60h27V32Z" fill="#3B82F6"/>
+    </g>
+    <text x="190" y="101" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" font-weight="650" letter-spacing="-2">
+      <tspan fill="#18181B">Machine</tspan><tspan fill="#3B82F6">Forge</tspan>
+    </text>
+  </g>
+  <g class="dark">
+    <g transform="translate(30 25)">
+      <rect width="130" height="130" rx="28" fill="#F4F4F5"/>
+      <path d="M30 98V32h17l19 30 19-30h17v66H85V61L66 91 47 61v37H30Z" fill="#18181B"/>
+      <path d="M112 32H70v15h27v12H74v14h23v25h15V73H85V60h27V32Z" fill="#3B82F6"/>
+    </g>
+    <text x="190" y="101" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" font-weight="650" letter-spacing="-2">
+      <tspan fill="#F4F4F5">Machine</tspan><tspan fill="#3B82F6">Forge</tspan>
+    </text>
+  </g>
+</svg>
