@@ -144,6 +144,10 @@
             'HOME\.poshthemes'
             'HOME\Documents\WindowsPowerShell'
             'HOME\Documents\PowerShell'
+            'HOME\sources'
+            'HOME\sources\github'
+            'HOME\sources\gitlab'
+            'HOME\sources\local'
         )
         Copy         = @(
             @{
