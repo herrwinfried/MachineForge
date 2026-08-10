@@ -46,16 +46,42 @@ Ensure script execution is enabled in PowerShell prior to running:
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+### Clone a Specific Version (Recommended)
+
+To clone a specific release or tag, replace `<tag>` with the desired version:
+
+**From GitLab:**
+
+```powershell
+git clone --branch <tag> https://gitlab.com/herrwinfried/machineforge.git
+cd machineforge
+```
+
+**From GitHub:**
+
+```powershell
+git clone --branch <tag> https://github.com/herrwinfried/machineforge.git
+cd machineforge
+```
+
+For example:
+
+```powershell
+git clone --branch v1.0.0-win https://gitlab.com/herrwinfried/machineforge.git
+cd machineforge
+```
 
 ### Clone Repository
 
 **From GitLab:**
+
 ```powershell
 git clone -b windows https://gitlab.com/herrwinfried/machineforge.git
 cd machineforge
 ```
 
 **From GitHub:**
+
 ```powershell
 git clone -b windows https://github.com/herrwinfried/machineforge.git
 cd machineforge
