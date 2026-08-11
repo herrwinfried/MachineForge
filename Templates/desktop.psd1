@@ -104,6 +104,7 @@
         'DisallowBrowserSettingsSyncUserOverride'
         'DisableWindowsSettingsSync'
         'DisallowWindowsSettingsSyncUserOverride'
+        'HideAccountRelatedNotifications'
     )
     Features            = @(
         "Microsoft-Hyper-V-All"
@@ -148,6 +149,7 @@
             'HOME\sources\github'
             'HOME\sources\gitlab'
             'HOME\sources\local'
+            'HOME\Desktop\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}'
         )
         Copy         = @(
             @{

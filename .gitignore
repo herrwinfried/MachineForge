@@ -9,6 +9,9 @@ logs/
 .history/
 .ionide/
 
+# SSH
+.ssh/
+
 # Visual Studio / Visual Studio Code / Visual Studio Community
 .vs/
 *.suo

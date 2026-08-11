@@ -34,7 +34,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - HideHiddenFiles: 2
     # - ShowHiddenFiles: 1
-    ShowHiddenFiles = @{
+    ShowHiddenFiles                                 = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'Hidden'
         Type  = 'DWord'
@@ -44,7 +44,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - HideHiddenFiles: 2
     # - ShowHiddenFiles: 1
-    HideHiddenFiles = @{
+    HideHiddenFiles                                 = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'Hidden'
         Type  = 'DWord'
@@ -54,7 +54,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSyncProviderNotifications: 0
     # - EnableSyncProviderNotifications: 1
-    EnableSyncProviderNotifications = @{
+    EnableSyncProviderNotifications                 = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'ShowSyncProviderNotifications'
         Type  = 'DWord'
@@ -64,7 +64,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSyncProviderNotifications: 0
     # - EnableSyncProviderNotifications: 1
-    DisableSyncProviderNotifications = @{
+    DisableSyncProviderNotifications                = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'ShowSyncProviderNotifications'
         Type  = 'DWord'
@@ -74,7 +74,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableNtfsFileColor: 0
     # - EnableNtfsFileColor: 1
-    EnableNtfsFileColor = @{
+    EnableNtfsFileColor                             = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'ShowEncryptCompressedColor'
         Type  = 'DWord'
@@ -84,7 +84,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableNtfsFileColor: 0
     # - EnableNtfsFileColor: 1
-    DisableNtfsFileColor = @{
+    DisableNtfsFileColor                            = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'ShowEncryptCompressedColor'
         Type  = 'DWord'
@@ -94,7 +94,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableItemCheckBoxes: 0
     # - EnableItemCheckBoxes: 1
-    EnableItemCheckBoxes = @{
+    EnableItemCheckBoxes                            = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'AutoCheckSelect'
         Type  = 'DWord'
@@ -104,7 +104,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableItemCheckBoxes: 0
     # - EnableItemCheckBoxes: 1
-    DisableItemCheckBoxes = @{
+    DisableItemCheckBoxes                           = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'AutoCheckSelect'
         Type  = 'DWord'
@@ -114,7 +114,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - HideFileNameExtensions: 1
     # - ShowFileNameExtensions: 0
-    ShowFileNameExtensions = @{
+    ShowFileNameExtensions                          = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'HideFileExt'
         Type  = 'DWord'
@@ -124,7 +124,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - HideFileNameExtensions: 1
     # - ShowFileNameExtensions: 0
-    HideFileNameExtensions = @{
+    HideFileNameExtensions                          = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'HideFileExt'
         Type  = 'DWord'
@@ -134,7 +134,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableRecentFiles: 0
     # - EnableRecentFiles: 1
-    EnableRecentFiles = @{
+    EnableRecentFiles                               = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer'
         Name  = 'ShowRecent'
         Type  = 'DWord'
@@ -144,7 +144,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableRecentFiles: 0
     # - EnableRecentFiles: 1
-    DisableRecentFiles = @{
+    DisableRecentFiles                              = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer'
         Name  = 'ShowRecent'
         Type  = 'DWord'
@@ -154,7 +154,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableFrequentFolders: 0
     # - EnableFrequentFolders: 1
-    EnableFrequentFolders = @{
+    EnableFrequentFolders                           = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer'
         Name  = 'ShowFrequent'
         Type  = 'DWord'
@@ -164,7 +164,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableFrequentFolders: 0
     # - EnableFrequentFolders: 1
-    DisableFrequentFolders = @{
+    DisableFrequentFolders                          = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer'
         Name  = 'ShowFrequent'
         Type  = 'DWord'
@@ -174,7 +174,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableCloudFilesInQuickAccess: 0
     # - EnableCloudFilesInQuickAccess: 1
-    EnableCloudFilesInQuickAccess = @{
+    EnableCloudFilesInQuickAccess                   = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer'
         Name  = 'ShowCloudFilesInQuickAccess'
         Type  = 'DWord'
@@ -184,7 +184,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableCloudFilesInQuickAccess: 0
     # - EnableCloudFilesInQuickAccess: 1
-    DisableCloudFilesInQuickAccess = @{
+    DisableCloudFilesInQuickAccess                  = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer'
         Name  = 'ShowCloudFilesInQuickAccess'
         Type  = 'DWord'
@@ -196,7 +196,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableStartMenuDocumentTracking: 0
     # - EnableStartMenuDocumentTracking: 1
-    EnableStartMenuDocumentTracking = @{
+    EnableStartMenuDocumentTracking                 = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'Start_TrackDocs'
         Type  = 'DWord'
@@ -206,7 +206,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableStartMenuDocumentTracking: 0
     # - EnableStartMenuDocumentTracking: 1
-    DisableStartMenuDocumentTracking = @{
+    DisableStartMenuDocumentTracking                = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'Start_TrackDocs'
         Type  = 'DWord'
@@ -216,7 +216,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableStartMenuAppTracking: 0
     # - EnableStartMenuAppTracking: 1
-    EnableStartMenuAppTracking = @{
+    EnableStartMenuAppTracking                      = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'Start_TrackProgs'
         Type  = 'DWord'
@@ -226,7 +226,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableStartMenuAppTracking: 0
     # - EnableStartMenuAppTracking: 1
-    DisableStartMenuAppTracking = @{
+    DisableStartMenuAppTracking                     = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
         Name  = 'Start_TrackProgs'
         Type  = 'DWord'
@@ -236,7 +236,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDeveloperMode: 0
     # - EnableDeveloperMode: 1
-    EnableDeveloperMode = @{
+    EnableDeveloperMode                             = @{
         Path  = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock'
         Name  = 'AllowDevelopmentWithoutDevLicense'
         Type  = 'DWord'
@@ -246,7 +246,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDeveloperMode: 0
     # - EnableDeveloperMode: 1
-    DisableDeveloperMode = @{
+    DisableDeveloperMode                            = @{
         Path  = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock'
         Name  = 'AllowDevelopmentWithoutDevLicense'
         Type  = 'DWord'
@@ -256,7 +256,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableTaskbarEndTask: 0
     # - EnableTaskbarEndTask: 1
-    EnableTaskbarEndTask = @{
+    EnableTaskbarEndTask                            = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\TaskbarDeveloperSettings'
         Name  = 'TaskbarEndTask'
         Type  = 'DWord'
@@ -266,7 +266,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableTaskbarEndTask: 0
     # - EnableTaskbarEndTask: 1
-    DisableTaskbarEndTask = @{
+    DisableTaskbarEndTask                           = @{
         Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\TaskbarDeveloperSettings'
         Name  = 'TaskbarEndTask'
         Type  = 'DWord'
@@ -276,7 +276,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableRunAsDifferentUser: 0
     # - EnableRunAsDifferentUser: 1
-    EnableRunAsDifferentUser = @{
+    EnableRunAsDifferentUser                        = @{
         Path  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
         Name  = 'ShowRunAsDifferentUserInStart'
         Type  = 'DWord'
@@ -286,7 +286,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableRunAsDifferentUser: 0
     # - EnableRunAsDifferentUser: 1
-    DisableRunAsDifferentUser = @{
+    DisableRunAsDifferentUser                       = @{
         Path  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
         Name  = 'ShowRunAsDifferentUserInStart'
         Type  = 'DWord'
@@ -298,7 +298,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableTelemetry: 0
     # - EnableTelemetry: 1
-    EnableTelemetry = @{
+    EnableTelemetry                                 = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'AllowTelemetry'
         Type  = 'DWord'
@@ -308,7 +308,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableTelemetry: 0
     # - EnableTelemetry: 1
-    DisableTelemetry = @{
+    DisableTelemetry                                = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'AllowTelemetry'
         Type  = 'DWord'
@@ -318,7 +318,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableActivityFeed: 0
     # - EnableActivityFeed: 1
-    EnableActivityFeed = @{
+    EnableActivityFeed                              = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'EnableActivityFeed'
         Type  = 'DWord'
@@ -328,7 +328,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableActivityFeed: 0
     # - EnableActivityFeed: 1
-    DisableActivityFeed = @{
+    DisableActivityFeed                             = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'EnableActivityFeed'
         Type  = 'DWord'
@@ -338,7 +338,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableUserActivityPublishing: 0
     # - EnableUserActivityPublishing: 1
-    EnableUserActivityPublishing = @{
+    EnableUserActivityPublishing                    = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'PublishUserActivities'
         Type  = 'DWord'
@@ -348,7 +348,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableUserActivityPublishing: 0
     # - EnableUserActivityPublishing: 1
-    DisableUserActivityPublishing = @{
+    DisableUserActivityPublishing                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'PublishUserActivities'
         Type  = 'DWord'
@@ -358,7 +358,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableUserActivityUpload: 0
     # - EnableUserActivityUpload: 1
-    EnableUserActivityUpload = @{
+    EnableUserActivityUpload                        = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'UploadUserActivities'
         Type  = 'DWord'
@@ -368,7 +368,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableUserActivityUpload: 0
     # - EnableUserActivityUpload: 1
-    DisableUserActivityUpload = @{
+    DisableUserActivityUpload                       = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'UploadUserActivities'
         Type  = 'DWord'
@@ -378,7 +378,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableOneDriveFileSync: 1
     # - EnableOneDriveFileSync: 0
-    EnableOneDriveFileSync = @{
+    EnableOneDriveFileSync                          = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\OneDrive'
         Name  = 'DisableFileSyncNGSC'
         Type  = 'DWord'
@@ -388,7 +388,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableOneDriveFileSync: 1
     # - EnableOneDriveFileSync: 0
-    DisableOneDriveFileSync = @{
+    DisableOneDriveFileSync                         = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\OneDrive'
         Name  = 'DisableFileSyncNGSC'
         Type  = 'DWord'
@@ -398,7 +398,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableCloudSearch: 0
     # - EnableCloudSearch: 1
-    EnableCloudSearch = @{
+    EnableCloudSearch                               = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Windows Search'
         Name  = 'AllowCloudSearch'
         Type  = 'DWord'
@@ -408,7 +408,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableCloudSearch: 0
     # - EnableCloudSearch: 1
-    DisableCloudSearch = @{
+    DisableCloudSearch                              = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Windows Search'
         Name  = 'AllowCloudSearch'
         Type  = 'DWord'
@@ -418,7 +418,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSearchLocationAccess: 0
     # - EnableSearchLocationAccess: 1
-    EnableSearchLocationAccess = @{
+    EnableSearchLocationAccess                      = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Windows Search'
         Name  = 'AllowSearchToUseLocation'
         Type  = 'DWord'
@@ -428,7 +428,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSearchLocationAccess: 0
     # - EnableSearchLocationAccess: 1
-    DisableSearchLocationAccess = @{
+    DisableSearchLocationAccess                     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Windows Search'
         Name  = 'AllowSearchToUseLocation'
         Type  = 'DWord'
@@ -438,7 +438,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableWindowsErrorReporting: 1
     # - EnableWindowsErrorReporting: 0
-    EnableWindowsErrorReporting = @{
+    EnableWindowsErrorReporting                     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting'
         Name  = 'Disabled'
         Type  = 'DWord'
@@ -448,7 +448,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableWindowsErrorReporting: 1
     # - EnableWindowsErrorReporting: 0
-    DisableWindowsErrorReporting = @{
+    DisableWindowsErrorReporting                    = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting'
         Name  = 'Disabled'
         Type  = 'DWord'
@@ -458,7 +458,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAdditionalErrorData: 1
     # - EnableAdditionalErrorData: 0
-    EnableAdditionalErrorData = @{
+    EnableAdditionalErrorData                       = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting'
         Name  = 'DontSendAdditionalData'
         Type  = 'DWord'
@@ -468,7 +468,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAdditionalErrorData: 1
     # - EnableAdditionalErrorData: 0
-    DisableAdditionalErrorData = @{
+    DisableAdditionalErrorData                      = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting'
         Name  = 'DontSendAdditionalData'
         Type  = 'DWord'
@@ -478,7 +478,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDesktopAnalyticsProcessing: 0
     # - EnableDesktopAnalyticsProcessing: 1
-    EnableDesktopAnalyticsProcessing = @{
+    EnableDesktopAnalyticsProcessing                = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'AllowDesktopAnalyticsProcessing'
         Type  = 'DWord'
@@ -488,7 +488,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDesktopAnalyticsProcessing: 0
     # - EnableDesktopAnalyticsProcessing: 1
-    DisableDesktopAnalyticsProcessing = @{
+    DisableDesktopAnalyticsProcessing               = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'AllowDesktopAnalyticsProcessing'
         Type  = 'DWord'
@@ -498,7 +498,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDeviceNameInTelemetry: 0
     # - EnableDeviceNameInTelemetry: 1
-    EnableDeviceNameInTelemetry = @{
+    EnableDeviceNameInTelemetry                     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'AllowDeviceNameInTelemetry'
         Type  = 'DWord'
@@ -508,7 +508,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDeviceNameInTelemetry: 0
     # - EnableDeviceNameInTelemetry: 1
-    DisableDeviceNameInTelemetry = @{
+    DisableDeviceNameInTelemetry                    = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'AllowDeviceNameInTelemetry'
         Type  = 'DWord'
@@ -518,7 +518,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAdvertisingId: 1
     # - EnableAdvertisingId: 0
-    EnableAdvertisingId = @{
+    EnableAdvertisingId                             = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\AdvertisingInfo'
         Name  = 'DisabledByGroupPolicy'
         Type  = 'DWord'
@@ -528,7 +528,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAdvertisingId: 1
     # - EnableAdvertisingId: 0
-    DisableAdvertisingId = @{
+    DisableAdvertisingId                            = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\AdvertisingInfo'
         Name  = 'DisabledByGroupPolicy'
         Type  = 'DWord'
@@ -538,7 +538,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisablePrivacyExperience: 1
     # - EnablePrivacyExperience: 0
-    EnablePrivacyExperience = @{
+    EnablePrivacyExperience                         = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\OOBE'
         Name  = 'DisablePrivacyExperience'
         Type  = 'DWord'
@@ -548,7 +548,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisablePrivacyExperience: 1
     # - EnablePrivacyExperience: 0
-    DisablePrivacyExperience = @{
+    DisablePrivacyExperience                        = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\OOBE'
         Name  = 'DisablePrivacyExperience'
         Type  = 'DWord'
@@ -558,7 +558,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableImplicitInkCollection: 1
     # - EnableImplicitInkCollection: 0
-    EnableImplicitInkCollection = @{
+    EnableImplicitInkCollection                     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\InputPersonalization'
         Name  = 'RestrictImplicitInkCollection'
         Type  = 'DWord'
@@ -568,7 +568,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableImplicitInkCollection: 1
     # - EnableImplicitInkCollection: 0
-    DisableImplicitInkCollection = @{
+    DisableImplicitInkCollection                    = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\InputPersonalization'
         Name  = 'RestrictImplicitInkCollection'
         Type  = 'DWord'
@@ -578,7 +578,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableImplicitTextCollection: 1
     # - EnableImplicitTextCollection: 0
-    EnableImplicitTextCollection = @{
+    EnableImplicitTextCollection                    = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\InputPersonalization'
         Name  = 'RestrictImplicitTextCollection'
         Type  = 'DWord'
@@ -588,7 +588,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableImplicitTextCollection: 1
     # - EnableImplicitTextCollection: 0
-    DisableImplicitTextCollection = @{
+    DisableImplicitTextCollection                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\InputPersonalization'
         Name  = 'RestrictImplicitTextCollection'
         Type  = 'DWord'
@@ -598,7 +598,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableTailoredExperiences: 1
     # - EnableTailoredExperiences: 0
-    EnableTailoredExperiences = @{
+    EnableTailoredExperiences                       = @{
         Path  = 'HKCU:\Software\Policies\Microsoft\Windows\CloudContent'
         Name  = 'DisableTailoredExperiencesWithDiagnosticData'
         Type  = 'DWord'
@@ -608,7 +608,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableTailoredExperiences: 1
     # - EnableTailoredExperiences: 0
-    DisableTailoredExperiences = @{
+    DisableTailoredExperiences                      = @{
         Path  = 'HKCU:\Software\Policies\Microsoft\Windows\CloudContent'
         Name  = 'DisableTailoredExperiencesWithDiagnosticData'
         Type  = 'DWord'
@@ -618,7 +618,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableThirdPartySpotlightSuggestions: 1
     # - EnableThirdPartySpotlightSuggestions: 0
-    EnableThirdPartySpotlightSuggestions = @{
+    EnableThirdPartySpotlightSuggestions            = @{
         Path  = 'HKCU:\Software\Policies\Microsoft\Windows\CloudContent'
         Name  = 'DisableThirdPartySuggestions'
         Type  = 'DWord'
@@ -628,7 +628,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableThirdPartySpotlightSuggestions: 1
     # - EnableThirdPartySpotlightSuggestions: 0
-    DisableThirdPartySpotlightSuggestions = @{
+    DisableThirdPartySpotlightSuggestions           = @{
         Path  = 'HKCU:\Software\Policies\Microsoft\Windows\CloudContent'
         Name  = 'DisableThirdPartySuggestions'
         Type  = 'DWord'
@@ -638,7 +638,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableWindowsConsumerFeatures: 1
     # - EnableWindowsConsumerFeatures: 0
-    EnableWindowsConsumerFeatures = @{
+    EnableWindowsConsumerFeatures                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\CloudContent'
         Name  = 'DisableWindowsConsumerFeatures'
         Type  = 'DWord'
@@ -648,7 +648,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableWindowsConsumerFeatures: 1
     # - EnableWindowsConsumerFeatures: 0
-    DisableWindowsConsumerFeatures = @{
+    DisableWindowsConsumerFeatures                  = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\CloudContent'
         Name  = 'DisableWindowsConsumerFeatures'
         Type  = 'DWord'
@@ -660,7 +660,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - UseHttpOnlyDeliveryOptimization: 0
     # - UseLanDeliveryOptimization: 1
-    UseLanDeliveryOptimization = @{
+    UseLanDeliveryOptimization                      = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
         Name  = 'DODownloadMode'
         Type  = 'DWord'
@@ -670,7 +670,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - UseHttpOnlyDeliveryOptimization: 0
     # - UseLanDeliveryOptimization: 1
-    UseHttpOnlyDeliveryOptimization = @{
+    UseHttpOnlyDeliveryOptimization                 = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
         Name  = 'DODownloadMode'
         Type  = 'DWord'
@@ -680,7 +680,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDeviceMetadataDownloads: 1
     # - EnableDeviceMetadataDownloads: 0
-    EnableDeviceMetadataDownloads = @{
+    EnableDeviceMetadataDownloads                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Device Metadata'
         Name  = 'PreventDeviceMetadataFromNetwork'
         Type  = 'DWord'
@@ -690,7 +690,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDeviceMetadataDownloads: 1
     # - EnableDeviceMetadataDownloads: 0
-    DisableDeviceMetadataDownloads = @{
+    DisableDeviceMetadataDownloads                  = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\Device Metadata'
         Name  = 'PreventDeviceMetadataFromNetwork'
         Type  = 'DWord'
@@ -700,7 +700,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDriverNotFoundErrorReporting: 1
     # - EnableDriverNotFoundErrorReporting: 0
-    EnableDriverNotFoundErrorReporting = @{
+    EnableDriverNotFoundErrorReporting              = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DeviceInstall\Settings'
         Name  = 'DisableSendGenericDriverNotFoundToWER'
         Type  = 'DWord'
@@ -710,7 +710,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDriverNotFoundErrorReporting: 1
     # - EnableDriverNotFoundErrorReporting: 0
-    DisableDriverNotFoundErrorReporting = @{
+    DisableDriverNotFoundErrorReporting             = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DeviceInstall\Settings'
         Name  = 'DisableSendGenericDriverNotFoundToWER'
         Type  = 'DWord'
@@ -720,7 +720,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - EnableFastStartup: 1
     # - DisableFastStartup: 0
-    EnableFastStartup = @{
+    EnableFastStartup                               = @{
         Path  = 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power'
         Name  = 'HiberbootEnabled'
         Type  = 'DWord'
@@ -730,7 +730,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableFastStartup: 0
     # - EnableFastStartup: 1
-    DisableFastStartup = @{
+    DisableFastStartup                              = @{
         Path  = 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power'
         Name  = 'HiberbootEnabled'
         Type  = 'DWord'
@@ -740,7 +740,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableCrossDeviceClipboard: 0
     # - EnableCrossDeviceClipboard: 1
-    EnableCrossDeviceClipboard = @{
+    EnableCrossDeviceClipboard                      = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'AllowCrossDeviceClipboard'
         Type  = 'DWord'
@@ -750,7 +750,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableCrossDeviceClipboard: 0
     # - EnableCrossDeviceClipboard: 1
-    DisableCrossDeviceClipboard = @{
+    DisableCrossDeviceClipboard                     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'AllowCrossDeviceClipboard'
         Type  = 'DWord'
@@ -760,7 +760,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableClipboardHistory: 0
     # - EnableClipboardHistory: 1
-    EnableClipboardHistory = @{
+    EnableClipboardHistory                          = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'AllowClipboardHistory'
         Type  = 'DWord'
@@ -770,7 +770,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableClipboardHistory: 0
     # - EnableClipboardHistory: 1
-    DisableClipboardHistory = @{
+    DisableClipboardHistory                         = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'AllowClipboardHistory'
         Type  = 'DWord'
@@ -782,7 +782,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSmartScreenAppReputation: 0
     # - EnableSmartScreenAppReputation: 1
-    EnableSmartScreenAppReputation = @{
+    EnableSmartScreenAppReputation                  = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'EnableSmartScreen'
         Type  = 'DWord'
@@ -792,7 +792,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSmartScreenAppReputation: 0
     # - EnableSmartScreenAppReputation: 1
-    DisableSmartScreenAppReputation = @{
+    DisableSmartScreenAppReputation                 = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'EnableSmartScreen'
         Type  = 'DWord'
@@ -802,7 +802,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - UseSmartScreenBlockMode: 'Block'
     # - UseSmartScreenWarnMode: 'Warn'
-    UseSmartScreenWarnMode = @{
+    UseSmartScreenWarnMode                          = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'ShellSmartScreenLevel'
         Type  = 'String'
@@ -812,7 +812,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - UseSmartScreenBlockMode: 'Block'
     # - UseSmartScreenWarnMode: 'Warn'
-    UseSmartScreenBlockMode = @{
+    UseSmartScreenBlockMode                         = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\System'
         Name  = 'ShellSmartScreenLevel'
         Type  = 'String'
@@ -824,7 +824,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowDiagnosticDataDeletion: 0
     # - DisallowDiagnosticDataDeletion: 1
-    AllowDiagnosticDataDeletion = @{
+    AllowDiagnosticDataDeletion                     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'DisableDeviceDelete'
         Type  = 'DWord'
@@ -834,7 +834,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowDiagnosticDataDeletion: 0
     # - DisallowDiagnosticDataDeletion: 1
-    DisallowDiagnosticDataDeletion = @{
+    DisallowDiagnosticDataDeletion                  = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'DisableDeviceDelete'
         Type  = 'DWord'
@@ -844,7 +844,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDiagnosticDataViewer: 1
     # - EnableDiagnosticDataViewer: 0
-    EnableDiagnosticDataViewer = @{
+    EnableDiagnosticDataViewer                      = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'DisableDiagnosticDataViewer'
         Type  = 'DWord'
@@ -854,7 +854,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableDiagnosticDataViewer: 1
     # - EnableDiagnosticDataViewer: 0
-    DisableDiagnosticDataViewer = @{
+    DisableDiagnosticDataViewer                     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'DisableDiagnosticDataViewer'
         Type  = 'DWord'
@@ -864,7 +864,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowAdditionalDiagnosticLogs: 0
     # - LimitAdditionalDiagnosticLogs: 1
-    AllowAdditionalDiagnosticLogs = @{
+    AllowAdditionalDiagnosticLogs                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'LimitDiagnosticLogCollection'
         Type  = 'DWord'
@@ -874,7 +874,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowAdditionalDiagnosticLogs: 0
     # - LimitAdditionalDiagnosticLogs: 1
-    LimitAdditionalDiagnosticLogs = @{
+    LimitAdditionalDiagnosticLogs                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'LimitDiagnosticLogCollection'
         Type  = 'DWord'
@@ -884,7 +884,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowFullDiagnosticDumps: 0
     # - LimitDiagnosticDumps: 1
-    AllowFullDiagnosticDumps = @{
+    AllowFullDiagnosticDumps                        = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'LimitDumpCollection'
         Type  = 'DWord'
@@ -894,7 +894,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowFullDiagnosticDumps: 0
     # - LimitDiagnosticDumps: 1
-    LimitDiagnosticDumps = @{
+    LimitDiagnosticDumps                            = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
         Name  = 'LimitDumpCollection'
         Type  = 'DWord'
@@ -906,7 +906,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableWindowsCopilot: 1
     # - EnableWindowsCopilot: 0
-    EnableWindowsCopilot = @{
+    EnableWindowsCopilot                            = @{
         Path  = 'HKCU:\Software\Policies\Microsoft\Windows\WindowsCopilot'
         Name  = 'TurnOffWindowsCopilot'
         Type  = 'DWord'
@@ -916,7 +916,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableWindowsCopilot: 1
     # - EnableWindowsCopilot: 0
-    DisableWindowsCopilot = @{
+    DisableWindowsCopilot                           = @{
         Path  = 'HKCU:\Software\Policies\Microsoft\Windows\WindowsCopilot'
         Name  = 'TurnOffWindowsCopilot'
         Type  = 'DWord'
@@ -926,7 +926,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableRecall: 0
     # - EnableRecall: 1
-    EnableRecall = @{
+    EnableRecall                                    = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'AllowRecallEnablement'
         Type  = 'DWord'
@@ -936,7 +936,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableRecall: 0
     # - EnableRecall: 1
-    DisableRecall = @{
+    DisableRecall                                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'AllowRecallEnablement'
         Type  = 'DWord'
@@ -946,7 +946,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableRecallSnapshots: 1
     # - EnableRecallSnapshots: 0
-    EnableRecallSnapshots = @{
+    EnableRecallSnapshots                           = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'DisableAIDataAnalysis'
         Type  = 'DWord'
@@ -956,7 +956,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableRecallSnapshots: 1
     # - EnableRecallSnapshots: 0
-    DisableRecallSnapshots = @{
+    DisableRecallSnapshots                          = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'DisableAIDataAnalysis'
         Type  = 'DWord'
@@ -966,7 +966,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowRecallExport: 1
     # - DisallowRecallExport: 0
-    AllowRecallExport = @{
+    AllowRecallExport                               = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'AllowRecallExport'
         Type  = 'DWord'
@@ -976,7 +976,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowRecallExport: 1
     # - DisallowRecallExport: 0
-    DisallowRecallExport = @{
+    DisallowRecallExport                            = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'AllowRecallExport'
         Type  = 'DWord'
@@ -986,7 +986,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableClickToDo: 1
     # - EnableClickToDo: 0
-    EnableClickToDo = @{
+    EnableClickToDo                                 = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'DisableClickToDo'
         Type  = 'DWord'
@@ -996,7 +996,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableClickToDo: 1
     # - EnableClickToDo: 0
-    DisableClickToDo = @{
+    DisableClickToDo                                = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'DisableClickToDo'
         Type  = 'DWord'
@@ -1006,7 +1006,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisablePaintCocreator: 1
     # - EnablePaintCocreator: 0
-    EnablePaintCocreator = @{
+    EnablePaintCocreator                            = @{
         Path  = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Paint'
         Name  = 'DisableCocreator'
         Type  = 'DWord'
@@ -1016,7 +1016,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisablePaintCocreator: 1
     # - EnablePaintCocreator: 0
-    DisablePaintCocreator = @{
+    DisablePaintCocreator                           = @{
         Path  = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Paint'
         Name  = 'DisableCocreator'
         Type  = 'DWord'
@@ -1026,7 +1026,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisablePaintGenerativeFill: 1
     # - EnablePaintGenerativeFill: 0
-    EnablePaintGenerativeFill = @{
+    EnablePaintGenerativeFill                       = @{
         Path  = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Paint'
         Name  = 'DisableGenerativeFill'
         Type  = 'DWord'
@@ -1036,7 +1036,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisablePaintGenerativeFill: 1
     # - EnablePaintGenerativeFill: 0
-    DisablePaintGenerativeFill = @{
+    DisablePaintGenerativeFill                      = @{
         Path  = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Paint'
         Name  = 'DisableGenerativeFill'
         Type  = 'DWord'
@@ -1046,7 +1046,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSettingsAgent: 1
     # - EnableSettingsAgent: 0
-    EnableSettingsAgent = @{
+    EnableSettingsAgent                             = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'DisableSettingsAgent'
         Type  = 'DWord'
@@ -1056,7 +1056,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSettingsAgent: 1
     # - EnableSettingsAgent: 0
-    DisableSettingsAgent = @{
+    DisableSettingsAgent                            = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'DisableSettingsAgent'
         Type  = 'DWord'
@@ -1067,7 +1067,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # - AllowUserControlOfRemoteAgentConnectors: 0
     # - EnableRemoteAgentConnectors: 1
     # - DisableRemoteAgentConnectors: 2
-    AllowUserControlOfRemoteAgentConnectors = @{
+    AllowUserControlOfRemoteAgentConnectors         = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'DisableRemoteAgentConnectors'
         Type  = 'DWord'
@@ -1078,7 +1078,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # - AllowUserControlOfRemoteAgentConnectors: 0
     # - EnableRemoteAgentConnectors: 1
     # - DisableRemoteAgentConnectors: 2
-    EnableRemoteAgentConnectors = @{
+    EnableRemoteAgentConnectors                     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'DisableRemoteAgentConnectors'
         Type  = 'DWord'
@@ -1089,7 +1089,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # - AllowUserControlOfRemoteAgentConnectors: 0
     # - EnableRemoteAgentConnectors: 1
     # - DisableRemoteAgentConnectors: 2
-    DisableRemoteAgentConnectors = @{
+    DisableRemoteAgentConnectors                    = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsAI'
         Name  = 'DisableRemoteAgentConnectors'
         Type  = 'DWord'
@@ -1101,7 +1101,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSettingsSync: 2
     # - EnableSettingsSync: 0
-    EnableSettingsSync = @{
+    EnableSettingsSync                              = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableSettingSync'
         Type  = 'DWord'
@@ -1111,7 +1111,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableSettingsSync: 2
     # - EnableSettingsSync: 0
-    DisableSettingsSync = @{
+    DisableSettingsSync                             = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableSettingSync'
         Type  = 'DWord'
@@ -1121,7 +1121,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowSettingsSyncUserOverride: 0
     # - DisallowSettingsSyncUserOverride: 1
-    AllowSettingsSyncUserOverride = @{
+    AllowSettingsSyncUserOverride                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1131,7 +1131,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowSettingsSyncUserOverride: 0
     # - DisallowSettingsSyncUserOverride: 1
-    DisallowSettingsSyncUserOverride = @{
+    DisallowSettingsSyncUserOverride                = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1141,7 +1141,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAppSettingsSync: 2
     # - EnableAppSettingsSync: 0
-    EnableAppSettingsSync = @{
+    EnableAppSettingsSync                           = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableApplicationSettingSync'
         Type  = 'DWord'
@@ -1151,7 +1151,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAppSettingsSync: 2
     # - EnableAppSettingsSync: 0
-    DisableAppSettingsSync = @{
+    DisableAppSettingsSync                          = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableApplicationSettingSync'
         Type  = 'DWord'
@@ -1161,7 +1161,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowAppSettingsSyncUserOverride: 0
     # - DisallowAppSettingsSyncUserOverride: 1
-    AllowAppSettingsSyncUserOverride = @{
+    AllowAppSettingsSyncUserOverride                = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableApplicationSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1171,7 +1171,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowAppSettingsSyncUserOverride: 0
     # - DisallowAppSettingsSyncUserOverride: 1
-    DisallowAppSettingsSyncUserOverride = @{
+    DisallowAppSettingsSyncUserOverride             = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableApplicationSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1181,7 +1181,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAppSync: 2
     # - EnableAppSync: 0
-    EnableAppSync = @{
+    EnableAppSync                                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableAppSyncSettingSync'
         Type  = 'DWord'
@@ -1191,7 +1191,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAppSync: 2
     # - EnableAppSync: 0
-    DisableAppSync = @{
+    DisableAppSync                                  = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableAppSyncSettingSync'
         Type  = 'DWord'
@@ -1201,7 +1201,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowAppSyncUserOverride: 0
     # - DisallowAppSyncUserOverride: 1
-    AllowAppSyncUserOverride = @{
+    AllowAppSyncUserOverride                        = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableAppSyncSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1211,7 +1211,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowAppSyncUserOverride: 0
     # - DisallowAppSyncUserOverride: 1
-    DisallowAppSyncUserOverride = @{
+    DisallowAppSyncUserOverride                     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableAppSyncSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1221,7 +1221,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableThemeSettingsSync: 2
     # - EnableThemeSettingsSync: 0
-    EnableThemeSettingsSync = @{
+    EnableThemeSettingsSync                         = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableDesktopThemeSettingSync'
         Type  = 'DWord'
@@ -1231,7 +1231,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableThemeSettingsSync: 2
     # - EnableThemeSettingsSync: 0
-    DisableThemeSettingsSync = @{
+    DisableThemeSettingsSync                        = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableDesktopThemeSettingSync'
         Type  = 'DWord'
@@ -1241,7 +1241,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowThemeSettingsSyncUserOverride: 0
     # - DisallowThemeSettingsSyncUserOverride: 1
-    AllowThemeSettingsSyncUserOverride = @{
+    AllowThemeSettingsSyncUserOverride              = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableDesktopThemeSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1251,7 +1251,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowThemeSettingsSyncUserOverride: 0
     # - DisallowThemeSettingsSyncUserOverride: 1
-    DisallowThemeSettingsSyncUserOverride = @{
+    DisallowThemeSettingsSyncUserOverride           = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableDesktopThemeSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1261,7 +1261,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisablePersonalizationSettingsSync: 2
     # - EnablePersonalizationSettingsSync: 0
-    EnablePersonalizationSettingsSync = @{
+    EnablePersonalizationSettingsSync               = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisablePersonalizationSettingSync'
         Type  = 'DWord'
@@ -1271,7 +1271,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisablePersonalizationSettingsSync: 2
     # - EnablePersonalizationSettingsSync: 0
-    DisablePersonalizationSettingsSync = @{
+    DisablePersonalizationSettingsSync              = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisablePersonalizationSettingSync'
         Type  = 'DWord'
@@ -1283,7 +1283,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowPersonalizationSettingsSyncUserOverride: 0
     # - DisallowPersonalizationSettingsSyncUserOverride: 1
-    AllowPersonalizationSettingsSyncUserOverride = @{
+    AllowPersonalizationSettingsSyncUserOverride    = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisablePersonalizationSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1301,7 +1301,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableStartLayoutSettingsSync: 2
     # - EnableStartLayoutSettingsSync: 0
-    EnableStartLayoutSettingsSync = @{
+    EnableStartLayoutSettingsSync                   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableStartLayoutSettingSync'
         Type  = 'DWord'
@@ -1311,7 +1311,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableStartLayoutSettingsSync: 2
     # - EnableStartLayoutSettingsSync: 0
-    DisableStartLayoutSettingsSync = @{
+    DisableStartLayoutSettingsSync                  = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableStartLayoutSettingSync'
         Type  = 'DWord'
@@ -1321,7 +1321,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowStartLayoutSettingsSyncUserOverride: 0
     # - DisallowStartLayoutSettingsSyncUserOverride: 1
-    AllowStartLayoutSettingsSyncUserOverride = @{
+    AllowStartLayoutSettingsSyncUserOverride        = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableStartLayoutSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1331,7 +1331,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowStartLayoutSettingsSyncUserOverride: 0
     # - DisallowStartLayoutSettingsSyncUserOverride: 1
-    DisallowStartLayoutSettingsSyncUserOverride = @{
+    DisallowStartLayoutSettingsSyncUserOverride     = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableStartLayoutSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1341,7 +1341,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableBrowserSettingsSync: 2
     # - EnableBrowserSettingsSync: 0
-    EnableBrowserSettingsSync = @{
+    EnableBrowserSettingsSync                       = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableWebBrowserSettingSync'
         Type  = 'DWord'
@@ -1351,7 +1351,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableBrowserSettingsSync: 2
     # - EnableBrowserSettingsSync: 0
-    DisableBrowserSettingsSync = @{
+    DisableBrowserSettingsSync                      = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableWebBrowserSettingSync'
         Type  = 'DWord'
@@ -1361,7 +1361,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowBrowserSettingsSyncUserOverride: 0
     # - DisallowBrowserSettingsSyncUserOverride: 1
-    AllowBrowserSettingsSyncUserOverride = @{
+    AllowBrowserSettingsSyncUserOverride            = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableWebBrowserSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1371,7 +1371,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowBrowserSettingsSyncUserOverride: 0
     # - DisallowBrowserSettingsSyncUserOverride: 1
-    DisallowBrowserSettingsSyncUserOverride = @{
+    DisallowBrowserSettingsSyncUserOverride         = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableWebBrowserSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1381,7 +1381,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableWindowsSettingsSync: 2
     # - EnableWindowsSettingsSync: 0
-    EnableWindowsSettingsSync = @{
+    EnableWindowsSettingsSync                       = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableWindowsSettingSync'
         Type  = 'DWord'
@@ -1391,7 +1391,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableWindowsSettingsSync: 2
     # - EnableWindowsSettingsSync: 0
-    DisableWindowsSettingsSync = @{
+    DisableWindowsSettingsSync                      = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableWindowsSettingSync'
         Type  = 'DWord'
@@ -1401,7 +1401,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowWindowsSettingsSyncUserOverride: 0
     # - DisallowWindowsSettingsSyncUserOverride: 1
-    AllowWindowsSettingsSyncUserOverride = @{
+    AllowWindowsSettingsSyncUserOverride            = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableWindowsSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1411,7 +1411,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowWindowsSettingsSyncUserOverride: 0
     # - DisallowWindowsSettingsSyncUserOverride: 1
-    DisallowWindowsSettingsSyncUserOverride = @{
+    DisallowWindowsSettingsSyncUserOverride         = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableWindowsSettingSyncUserOverride'
         Type  = 'DWord'
@@ -1421,7 +1421,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAccessibilitySettingsSync: 2
     # - EnableAccessibilitySettingsSync: 0
-    EnableAccessibilitySettingsSync = @{
+    EnableAccessibilitySettingsSync                 = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableAccessibilitySettingSync'
         Type  = 'DWord'
@@ -1431,7 +1431,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - DisableAccessibilitySettingsSync: 2
     # - EnableAccessibilitySettingsSync: 0
-    DisableAccessibilitySettingsSync = @{
+    DisableAccessibilitySettingsSync                = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableAccessibilitySettingSync'
         Type  = 'DWord'
@@ -1441,7 +1441,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowAccessibilitySettingsSyncUserOverride: 0
     # - DisallowAccessibilitySettingsSyncUserOverride: 1
-    AllowAccessibilitySettingsSyncUserOverride = @{
+    AllowAccessibilitySettingsSyncUserOverride      = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableAccessibilitySettingSyncUserOverride'
         Type  = 'DWord'
@@ -1451,7 +1451,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowAccessibilitySettingsSyncUserOverride: 0
     # - DisallowAccessibilitySettingsSyncUserOverride: 1
-    DisallowAccessibilitySettingsSyncUserOverride = @{
+    DisallowAccessibilitySettingsSyncUserOverride   = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableAccessibilitySettingSyncUserOverride'
         Type  = 'DWord'
@@ -1461,7 +1461,7 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowSettingsSyncOnMeteredNetworks: 0
     # - DisallowSettingsSyncOnMeteredNetworks: 1
-    AllowSettingsSyncOnMeteredNetworks = @{
+    AllowSettingsSyncOnMeteredNetworks              = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableSyncOnPaidNetwork'
         Type  = 'DWord'
@@ -1471,10 +1471,32 @@ Get-ItemProperty first, then test with -WhatIf.
     # Available values:
     # - AllowSettingsSyncOnMeteredNetworks: 0
     # - DisallowSettingsSyncOnMeteredNetworks: 1
-    DisallowSettingsSyncOnMeteredNetworks = @{
+    DisallowSettingsSyncOnMeteredNetworks           = @{
         Path  = 'HKLM:\Software\Policies\Microsoft\Windows\SettingSync'
         Name  = 'DisableSyncOnPaidNetwork'
         Type  = 'DWord'
         Value = 1
+    }
+
+    # Description: Controls whether account-related notifications are shown in the Start menu.
+    # Available values:
+    # - ShowAccountRelatedNotifications: 1
+    # - HideAccountRelatedNotifications: 0
+    ShowAccountRelatedNotifications                 = @{
+        Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+        Name  = 'Start_AccountNotifications'
+        Type  = 'DWord'
+        Value = 1
+    }
+
+    # Description: Controls whether account-related notifications are shown in the Start menu.
+    # Available values:
+    # - ShowAccountRelatedNotifications: 1
+    # - HideAccountRelatedNotifications: 0
+    HideAccountRelatedNotifications                 = @{
+        Path  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+        Name  = 'Start_AccountNotifications'
+        Type  = 'DWord'
+        Value = 0
     }
 }
