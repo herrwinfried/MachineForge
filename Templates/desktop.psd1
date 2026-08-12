@@ -56,6 +56,7 @@
         'DisableUserActivityUpload'
         'DisableOneDriveFileSync'
         'DisableCloudSearch'
+        'DisableSearchBoxSuggestions'
         'DisableSearchLocationAccess'
         'DisableWindowsErrorReporting'
         'DisableAdditionalErrorData'
@@ -155,13 +156,6 @@
             @{
                 source = 'SCRIPTDIR/data/home'
                 target = 'HOME'
-            }
-        )
-        DownloadFile = @(
-            @{
-                url          = 'https://raw.githubusercontent.com/herrwinfried/myconfig/linux/data/home/.poshthemes/default.omp.json'
-                target       = 'HOME\.poshthemes'
-                fullFileName = 'default.omp.json'
             }
         )
         AppInstaller = @(

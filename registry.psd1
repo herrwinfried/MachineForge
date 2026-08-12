@@ -414,6 +414,18 @@ Get-ItemProperty first, then test with -WhatIf.
         Type  = 'DWord'
         Value = 0
     }
+    DisableSearchBoxSuggestions                     = @{
+        Path  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
+        Name  = 'DisableSearchBoxSuggestions'
+        Type  = 'DWord'
+        Value = 1
+    }
+    EnableSearchBoxSuggestions                      = @{
+        Path  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
+        Name  = 'DisableSearchBoxSuggestions'
+        Type  = 'DWord'
+        Value = 0
+    }
     # Description: Controls whether Windows Search can use device location.
     # Available values:
     # - DisableSearchLocationAccess: 0
