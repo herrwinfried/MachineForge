@@ -36,11 +36,17 @@ function Resolve-FirewallRules {
             $LocalPort = $Variables[$LocalPort]
         }
 
+        $Enabled = switch ($Rule.Enabled) {
+            $true { 'True' }
+            $false { 'False' }
+            default { $Rule.Enabled }
+        }
+
         $Resolved = @{
             RuleKey     = $RuleName
             Name        = $Name
             DisplayName = $Rule.DisplayName
-            Enabled     = $Rule.Enabled
+            Enabled     = $Enabled
             Profile     = $Rule.Profile
             Direction   = $Rule.Direction
             Action      = $Rule.Action
@@ -82,11 +88,17 @@ function New-ResolvedFirewallRules {
             continue
         }
 
+        $Enabled = switch ($Rule.Enabled) {
+            $true { 'True' }
+            $false { 'False' }
+            default { $Rule.Enabled }
+        }
+
         try {
             New-NetFirewallRule `
                 -Name        $Rule.Name `
                 -DisplayName $Rule.DisplayName `
-                -Enabled     $Rule.Enabled `
+                -Enabled     $Enabled `
                 -Profile     $Rule.Profile `
                 -Direction   $Rule.Direction `
                 -Action      $Rule.Action `
