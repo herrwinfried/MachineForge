@@ -277,20 +277,22 @@ Get-ItemProperty first, then test with -WhatIf.
     # - DisableRunAsDifferentUser: 0
     # - EnableRunAsDifferentUser: 1
     EnableRunAsDifferentUser                        = @{
-        Path  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
-        Name  = 'ShowRunAsDifferentUserInStart'
-        Type  = 'DWord'
-        Value = 1
+        Path                  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
+        Name                  = 'ShowRunAsDifferentUserInStart'
+        Type                  = 'DWord'
+        RequiresAdministrator = $true
+        Value                 = 1
     }
     # Description: Controls whether Start shows the Run as different user command.
     # Available values:
     # - DisableRunAsDifferentUser: 0
     # - EnableRunAsDifferentUser: 1
     DisableRunAsDifferentUser                       = @{
-        Path  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
-        Name  = 'ShowRunAsDifferentUserInStart'
-        Type  = 'DWord'
-        Value = 0
+        Path                  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
+        Name                  = 'ShowRunAsDifferentUserInStart'
+        Type                  = 'DWord'
+        RequiresAdministrator = $true
+        Value                 = 0
     }
 
     # Privacy, search, and diagnostics
@@ -414,17 +416,19 @@ Get-ItemProperty first, then test with -WhatIf.
         Type  = 'DWord'
         Value = 0
     }
-    DisableSearchBoxSuggestions                     = @{
-        Path  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
-        Name  = 'DisableSearchBoxSuggestions'
-        Type  = 'DWord'
-        Value = 1
-    }
     EnableSearchBoxSuggestions                      = @{
-        Path  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
-        Name  = 'DisableSearchBoxSuggestions'
-        Type  = 'DWord'
-        Value = 0
+        Path                  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
+        Name                  = 'DisableSearchBoxSuggestions'
+        RequiresAdministrator = $true
+        Type                  = 'DWord'
+        Value                 = 0
+    }
+    DisableSearchBoxSuggestions                     = @{
+        Path                  = 'HKCU:\Software\Policies\Microsoft\Windows\Explorer'
+        Name                  = 'DisableSearchBoxSuggestions'
+        RequiresAdministrator = $true
+        Type                  = 'DWord'
+        Value                 = 1
     }
     # Description: Controls whether Windows Search can use device location.
     # Available values:
@@ -919,20 +923,22 @@ Get-ItemProperty first, then test with -WhatIf.
     # - DisableWindowsCopilot: 1
     # - EnableWindowsCopilot: 0
     EnableWindowsCopilot                            = @{
-        Path  = 'HKCU:\Software\Policies\Microsoft\Windows\WindowsCopilot'
-        Name  = 'TurnOffWindowsCopilot'
-        Type  = 'DWord'
-        Value = 0
+        Path                  = 'HKCU:\Software\Policies\Microsoft\Windows\WindowsCopilot'
+        Name                  = 'TurnOffWindowsCopilot'
+        Type                  = 'DWord'
+        RequiresAdministrator = $true
+        Value                 = 0
     }
     # Description: Controls whether the legacy Windows Copilot experience is available. This policy does not control the newer Copilot app.
     # Available values:
     # - DisableWindowsCopilot: 1
     # - EnableWindowsCopilot: 0
     DisableWindowsCopilot                           = @{
-        Path  = 'HKCU:\Software\Policies\Microsoft\Windows\WindowsCopilot'
-        Name  = 'TurnOffWindowsCopilot'
-        Type  = 'DWord'
-        Value = 1
+        Path                  = 'HKCU:\Software\Policies\Microsoft\Windows\WindowsCopilot'
+        Name                  = 'TurnOffWindowsCopilot'
+        Type                  = 'DWord'
+        RequiresAdministrator = $true
+        Value                 = 1
     }
     # Description: Controls whether the Recall optional component can be installed and enabled. Disabling it removes Recall and deletes saved snapshots after a restart.
     # Available values:
