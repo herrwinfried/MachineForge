@@ -258,11 +258,19 @@ npm search <name>. Each key must be unique; use a short alias without spaces.
         enabled        = $true
     }
 
+    # https://github.com/rustdesk/rustdesk/discussions/13025
+    # rustdesk            = @{
+    #     Id             = "RustDesk.RustDesk"
+    #     PackageManager = "winget"
+    #     interactive    = $true
+    #     enabled        = $false
+    # }
+
     rustdesk            = @{
-        Id             = "RustDesk.RustDesk"
-        PackageManager = "winget"
-        interactive    = $false
-        enabled        = $true
+        Id             = "rustdesk"
+        PackageManager = "chocolatey"
+        interactive    = $true
+        enabled        = $false
     }
 
     droidcam            = @{
