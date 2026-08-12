@@ -25,6 +25,8 @@ MachineForge is designed to be customized to your needs, so don't forget to revi
 | **Default Profile** | [`Profile/asuswindows11.psd1`](Profile/asuswindows11.psd1) |
 | **Privileges** | Standard User for user tasks; Administrator elevation when system-level changes are applied |
 
+> **Note:** MachineForge requires PowerShell Core 7+ (`pwsh`). If you start it from Windows PowerShell, the script will offer to reopen itself with PowerShell Core.
+
 ---
 
 ## ⚡ Key Features
@@ -40,6 +42,14 @@ MachineForge is designed to be customized to your needs, so don't forget to revi
 ---
 
 ## 📥 Installation & Setup
+
+MachineForge must be run with PowerShell Core 7+ (`pwsh`).
+
+If `pwsh` is not installed, install it first:
+
+```powershell
+winget install --id Microsoft.PowerShell --source winget
+```
 
 Ensure script execution is enabled in PowerShell prior to running:
 

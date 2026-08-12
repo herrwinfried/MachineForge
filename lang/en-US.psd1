@@ -1,4 +1,4 @@
-@{
+﻿@{
     # Banners
     BannerSystemDetection           = 'System Detection'
     BannerProfileSelection          = 'Profile Selection'
@@ -10,6 +10,19 @@
     BannerElevatedSession           = 'Elevated Session — Admin Operations'
     WindowTitleSession              = 'MachineForge - User Session'
     WindowTitleAdmin                = 'MachineForge - Admin Session'
+
+    # PowerShell Runtime
+    PowerShellCoreRequired          = 'MachineForge can only run with PowerShell Core 7+ (pwsh).'
+    PromptLaunchPowerShellCore      = 'You are running Windows PowerShell. Do you want to reopen this script with PowerShell Core now?'
+    LaunchPowerShellCoreYes         = '&Yes'
+    LaunchPowerShellCoreNo          = '&No'
+    LaunchPowerShellCoreYesHelp     = 'Start this script again with pwsh and keep the selected options.'
+    LaunchPowerShellCoreNoHelp      = 'Exit without running setup.'
+    PowerShellCoreNotFound          = 'PowerShell Core (pwsh) was not found. Install PowerShell 7+ and run the script again.'
+    PowerShellCoreInstallHint       = 'You can install it with winget:'
+    PowerShellCoreDeclined          = 'Setup was not started because PowerShell Core is required.'
+    RelaunchingWithPowerShellCore   = 'Reopening with PowerShell Core...'
+    PowerShellCoreLaunchFailed      = 'Could not start PowerShell Core: {0}'
 
     # System Info
     SystemDetected                  = 'System detected:'

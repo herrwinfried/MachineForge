@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Windows Configuration Automation — Main Entry Point.
     Detects hardware, matches a profile, resolves templates, and applies configuration.
@@ -43,9 +43,115 @@ $ErrorActionPreference = 'Stop'
 $ModuleDir = Join-Path $PSScriptRoot 'modules'
 $LangDir = Join-Path $PSScriptRoot 'lang'
 
+Import-Module (Join-Path $ModuleDir 'i18n.psm1')         -Force -DisableNameChecking
+Initialize-Localization -Language $Language -LangDir $LangDir
+
+function Add-ProcessArgument {
+    param(
+        [Parameter(Mandatory)]
+        [string[]]$ArgumentList,
+
+        [Parameter(Mandatory)]
+        [string]$Name,
+
+        [object]$Value
+    )
+
+    if ($null -eq $Value -or [string]::IsNullOrEmpty([string]$Value)) {
+        return $ArgumentList
+    }
+
+    return @($ArgumentList + $Name + [string]$Value)
+}
+
+function ConvertTo-StartProcessArgument {
+    param(
+        [Parameter(Mandatory, ValueFromPipeline)]
+        [string]$Argument
+    )
+
+    process {
+        if ($Argument -match '[\s"]') {
+            return '"' + ($Argument -replace '"', '\"') + '"'
+        }
+
+        return $Argument
+    }
+}
+
+function Test-PowerShellCoreOrRelaunch {
+    if ($PSVersionTable.ContainsKey('PSEdition') -and $PSVersionTable.PSEdition -eq 'Core') {
+        return
+    }
+
+    Write-Host ""
+    Write-Host (Get-I18n 'PowerShellCoreRequired') -ForegroundColor Yellow
+
+    $PwshCommand = Get-Command 'pwsh.exe' -ErrorAction SilentlyContinue
+    if (-not $PwshCommand) {
+        $PwshCommand = Get-Command 'pwsh' -ErrorAction SilentlyContinue
+    }
+
+    if (-not $PwshCommand) {
+        Write-Host (Get-I18n 'PowerShellCoreNotFound') -ForegroundColor Red
+        Write-Host (Get-I18n 'PowerShellCoreInstallHint') -ForegroundColor Yellow
+        Write-Host "  winget install --id Microsoft.PowerShell --source winget" -ForegroundColor Cyan
+        exit 1
+    }
+
+    $Choices = [System.Collections.ObjectModel.Collection[System.Management.Automation.Host.ChoiceDescription]]::new()
+    $Choices.Add([System.Management.Automation.Host.ChoiceDescription]::new((Get-I18n 'LaunchPowerShellCoreYes'), (Get-I18n 'LaunchPowerShellCoreYesHelp')))
+    $Choices.Add([System.Management.Automation.Host.ChoiceDescription]::new((Get-I18n 'LaunchPowerShellCoreNo'), (Get-I18n 'LaunchPowerShellCoreNoHelp')))
+
+    $Choice = $Host.UI.PromptForChoice(
+        'MachineForge',
+        (Get-I18n 'PromptLaunchPowerShellCore'),
+        $Choices,
+        0
+    )
+
+    if ($Choice -ne 0) {
+        Write-Host (Get-I18n 'PowerShellCoreDeclined') -ForegroundColor Yellow
+        exit 1
+    }
+
+    $ScriptPath = if ($PSCommandPath) { $PSCommandPath } else { $MyInvocation.MyCommand.Path }
+    $Arguments = @(
+        '-NoProfile'
+        '-ExecutionPolicy'
+        'Bypass'
+        '-File'
+        $ScriptPath
+    )
+
+    $Arguments = Add-ProcessArgument -ArgumentList $Arguments -Name '-ProfileName' -Value $ProfileName
+    $Arguments = Add-ProcessArgument -ArgumentList $Arguments -Name '-Language' -Value (Get-CurrentLanguage)
+
+    if ($SkipAdmin) {
+        $Arguments += '-SkipAdmin'
+    }
+
+    if ($WhatIfPreference) {
+        $Arguments += '-WhatIf'
+    }
+
+    Write-Host (Get-I18n 'RelaunchingWithPowerShellCore') -ForegroundColor Cyan
+
+    try {
+        $ArgumentText = ($Arguments | ConvertTo-StartProcessArgument) -join ' '
+        Start-Process -FilePath $PwshCommand.Source -ArgumentList $ArgumentText
+        exit 0
+    }
+    catch {
+        Write-Host (Get-I18n 'PowerShellCoreLaunchFailed' @($_.Exception.Message)) -ForegroundColor Red
+        exit 1
+    }
+}
+
+Test-PowerShellCoreOrRelaunch
+
 Import-Module (Join-Path $ModuleDir 'logger.psm1')       -Force -DisableNameChecking
 Import-Module (Join-Path $ModuleDir 'global.psm1')       -Force -DisableNameChecking
-Import-Module (Join-Path $ModuleDir 'i18n.psm1')         -Force -DisableNameChecking
 Import-Module (Join-Path $ModuleDir 'profile.psm1')      -Force -DisableNameChecking
 Import-Module (Join-Path $ModuleDir 'registry.psm1')     -Force -DisableNameChecking
 Import-Module (Join-Path $ModuleDir 'package.psm1')      -Force -DisableNameChecking
