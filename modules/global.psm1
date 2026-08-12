@@ -73,7 +73,18 @@ function Write-Banner {
     }
 }
 
+function Initialize-DismModule {
+    if ($PSEdition -eq 'Core') {
+        Get-Module DISM | Remove-Module -Force -ErrorAction SilentlyContinue
+        Import-Module DISM -UseWindowsPowerShell -ErrorAction SilentlyContinue
+        return
+    }
+
+    Import-Module DISM -ErrorAction SilentlyContinue
+}
+
 Export-ModuleMember -Function `
     Test-IsAdministrator, `
     Write-Step, `
-    Write-Banner
+    Write-Banner, `
+    Initialize-DismModule
