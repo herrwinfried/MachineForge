@@ -55,7 +55,7 @@ cd machineforge
 2. **Always Test with Dry-Run (`-WhatIf`)**  
    Before submitting changes, test your configuration or code changes without modifying your local system state:
    ```powershell
-   pwsh .\Invoke-Setup.ps1 -ProfileName <profile-name> -WhatIf
+   powershell .\Invoke-Setup.ps1 -ProfileName <profile-name> -WhatIf
    ```
 
 3. **Code Style & Formatting**

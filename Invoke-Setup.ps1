@@ -79,53 +79,38 @@ function ConvertTo-StartProcessArgument {
     }
 }
 
-function Test-PowerShellCoreOrRelaunch {
-    if ($PSVersionTable.ContainsKey('PSEdition') -and $PSVersionTable.PSEdition -eq 'Core') {
+function Test-WindowsPowerShell {
+    if ($PSVersionTable.ContainsKey('PSEdition') -and $PSVersionTable.PSEdition -eq 'Desktop') {
         return
     }
 
-    Write-Host ""
-    Write-Host (Get-I18n 'PowerShellCoreRequired') -ForegroundColor Yellow
+    Write-Host "`n"
+    Write-Host (Get-I18n 'WindowsPowerShellRequired') -ForegroundColor Yellow
 
-    $PwshCommand = Get-Command 'pwsh.exe' -ErrorAction SilentlyContinue
-    if (-not $PwshCommand) {
-        $PwshCommand = Get-Command 'pwsh' -ErrorAction SilentlyContinue
+    $ScriptPath = if ($PSCommandPath) {
+        $PSCommandPath
+    }
+    else {
+        $MyInvocation.MyCommand.Path
     }
 
-    if (-not $PwshCommand) {
-        Write-Host (Get-I18n 'PowerShellCoreNotFound') -ForegroundColor Red
-        Write-Host (Get-I18n 'PowerShellCoreInstallHint') -ForegroundColor Yellow
-        Write-Host "  winget install --id Microsoft.PowerShell --source winget" -ForegroundColor Cyan
-        exit 1
-    }
-
-    $Choices = [System.Collections.ObjectModel.Collection[System.Management.Automation.Host.ChoiceDescription]]::new()
-    $Choices.Add([System.Management.Automation.Host.ChoiceDescription]::new((Get-I18n 'LaunchPowerShellCoreYes'), (Get-I18n 'LaunchPowerShellCoreYesHelp')))
-    $Choices.Add([System.Management.Automation.Host.ChoiceDescription]::new((Get-I18n 'LaunchPowerShellCoreNo'), (Get-I18n 'LaunchPowerShellCoreNoHelp')))
-
-    $Choice = $Host.UI.PromptForChoice(
-        'MachineForge',
-        (Get-I18n 'PromptLaunchPowerShellCore'),
-        $Choices,
-        0
-    )
-
-    if ($Choice -ne 0) {
-        Write-Host (Get-I18n 'PowerShellCoreDeclined') -ForegroundColor Yellow
-        exit 1
-    }
-
-    $ScriptPath = if ($PSCommandPath) { $PSCommandPath } else { $MyInvocation.MyCommand.Path }
     $Arguments = @(
         '-NoProfile'
         '-ExecutionPolicy'
         'Bypass'
         '-File'
-        $ScriptPath
+        "`"$ScriptPath`""
     )
 
-    $Arguments = Add-ProcessArgument -ArgumentList $Arguments -Name '-ProfileName' -Value $ProfileName
-    $Arguments = Add-ProcessArgument -ArgumentList $Arguments -Name '-Language' -Value (Get-CurrentLanguage)
+    $Arguments = Add-ProcessArgument `
+        -ArgumentList $Arguments `
+        -Name '-ProfileName' `
+        -Value $ProfileName
+
+    $Arguments = Add-ProcessArgument `
+        -ArgumentList $Arguments `
+        -Name '-Language' `
+        -Value (Get-CurrentLanguage)
 
     if ($SkipAdmin) {
         $Arguments += '-SkipAdmin'
@@ -135,20 +120,17 @@ function Test-PowerShellCoreOrRelaunch {
         $Arguments += '-WhatIf'
     }
 
-    Write-Host (Get-I18n 'RelaunchingWithPowerShellCore') -ForegroundColor Cyan
+    $ArgumentText = $Arguments -join ' '
 
-    try {
-        $ArgumentText = ($Arguments | ConvertTo-StartProcessArgument) -join ' '
-        Start-Process -FilePath $PwshCommand.Source -ArgumentList $ArgumentText
-        exit 0
-    }
-    catch {
-        Write-Host (Get-I18n 'PowerShellCoreLaunchFailed' @($_.Exception.Message)) -ForegroundColor Red
-        exit 1
-    }
+    Write-Host "powershell.exe $ArgumentText" `
+        -BackgroundColor DarkGreen `
+        -ForegroundColor White
+    Write-Host "`n"
+
+    exit 1
 }
 
-Test-PowerShellCoreOrRelaunch
+Test-WindowsPowerShell
 
 Import-Module (Join-Path $ModuleDir 'logger.psm1')       -Force -DisableNameChecking
 Import-Module (Join-Path $ModuleDir 'global.psm1')       -Force -DisableNameChecking
@@ -740,7 +722,7 @@ catch {
 
         Write-Step -Section 'Admin' -Message (Get-I18n 'LaunchingElevated') -Level Info
 
-        Start-Process -FilePath 'pwsh.exe' `
+        Start-Process -FilePath 'powershell.exe' `
             -ArgumentList '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', $AdminScriptPath `
             -Verb RunAs `
             -Wait

@@ -12,17 +12,7 @@
     WindowTitleAdmin                = 'MachineForge - Yönetici Oturumu'
 
     # PowerShell Runtime
-    PowerShellCoreRequired          = 'MachineForge yalnızca PowerShell Core 7+ (pwsh) ile çalışabilir.'
-    PromptLaunchPowerShellCore      = 'Windows PowerShell ile çalıştırıyorsunuz. Bu betiği şimdi PowerShell Core ile yeniden açmak ister misiniz?'
-    LaunchPowerShellCoreYes         = '&Evet'
-    LaunchPowerShellCoreNo          = '&Hayır'
-    LaunchPowerShellCoreYesHelp     = 'Bu betiği pwsh ile tekrar başlatır ve seçili ayarları korur.'
-    LaunchPowerShellCoreNoHelp      = 'Kurulumu çalıştırmadan çıkar.'
-    PowerShellCoreNotFound          = 'PowerShell Core (pwsh) bulunamadı. PowerShell 7+ kurup betiği tekrar çalıştırın.'
-    PowerShellCoreInstallHint       = 'winget ile kurmak için şu komutu kullanabilirsiniz:'
-    PowerShellCoreDeclined          = 'PowerShell Core gerekli olduğu için kurulum başlatılmadı.'
-    RelaunchingWithPowerShellCore   = 'PowerShell Core ile yeniden açılıyor...'
-    PowerShellCoreLaunchFailed      = 'PowerShell Core başlatılamadı: {0}'
+    WindowsPowerShellRequired          = 'MachineForge yalnızca Windows PowerShell ile çalışabilir.'
 
     # System Info
     SystemDetected                  = 'Algılanan sistem:'

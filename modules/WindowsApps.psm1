@@ -31,17 +31,17 @@ function Remove-ResolvedWindowsApps {
                     Where-Object { $_.DisplayName -like "*$App*" -or $_.PackageName -like "*$App*" }
                 if ($ProvPackage) {
                     foreach ($Prov in $ProvPackage) {
-                        Remove-AppxProvisionedPackage -Online -PackageName $Prov.PackageName -ErrorAction SilentlyContinue | Out-Null
+                        Remove-AppxProvisionedPackage -Online -PackageName $Prov.PackageName 
                     }
                 }
             }
 
             # 2. Get AppX Package for current user / all users
             if ($IsAdmin) {
-                $Packages = Get-AppxPackage -AllUsers -Name "*$App*" -ErrorAction SilentlyContinue
+                $Packages = Get-AppxPackage -AllUsers -Name "*$App*"
             }
             else {
-                $Packages = Get-AppxPackage -User $UserName -Name "*$App*" -ErrorAction SilentlyContinue
+                $Packages = Get-AppxPackage -User $UserName -Name "*$App*"
             }
 
             if (-not $Packages) {
@@ -51,10 +51,10 @@ function Remove-ResolvedWindowsApps {
 
             foreach ($Pkg in $Packages) {
                 if ($IsAdmin) {
-                    Remove-AppxPackage -Package $Pkg.PackageFullName -AllUsers -ErrorAction SilentlyContinue
+                    Remove-AppxPackage -Package $Pkg.PackageFullName -AllUsers 
                 }
                 else {
-                    Remove-AppxPackage -Package $Pkg.PackageFullName -User $UserName -ErrorAction SilentlyContinue
+                    Remove-AppxPackage -Package $Pkg.PackageFullName -User $UserName
                 }
             }
 

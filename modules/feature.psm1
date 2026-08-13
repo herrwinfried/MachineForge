@@ -14,10 +14,6 @@ function Enable-ResolvedFeatures {
         [switch]$WhatIf
     )
 
-    if (-not $WhatIf -and $Features.Count -gt 0) {
-        Initialize-DismModule
-    }
-
     foreach ($Feature in $Features) {
         if ($WhatIf) {
             Write-Step -Section 'Features' -Message (Get-I18n 'WhatIfEnableFeature' @($Feature)) -Level Info
@@ -59,10 +55,6 @@ function Install-WindowsCapabilities {
         [switch]$WhatIf
     )
 
-    if (-not $WhatIf -and $Capabilities.Count -gt 0) {
-        Initialize-DismModule
-    }
-
     foreach ($CapabilityName in $Capabilities) {
         if ($WhatIf) {
             Write-Step -Section 'Capabilities' -Message (Get-I18n 'WhatIfInstallCapability' @($CapabilityName)) -Level Info
@@ -95,10 +87,6 @@ function Disable-ResolvedFeatures {
         [switch]$WhatIf
     )
 
-    if (-not $WhatIf -and $Features.Count -gt 0) {
-        Initialize-DismModule
-    }
-
     foreach ($Feature in $Features) {
         if ($WhatIf) {
             Write-Step -Section 'Features' -Message (Get-I18n 'WhatIfDisableFeature' @($Feature)) -Level Info
@@ -128,10 +116,6 @@ function Remove-WindowsCapabilities {
         [string[]]$Capabilities,
         [switch]$WhatIf
     )
-
-    if (-not $WhatIf -and $Capabilities.Count -gt 0) {
-        Initialize-DismModule
-    }
 
     foreach ($CapabilityName in $Capabilities) {
         if ($WhatIf) {

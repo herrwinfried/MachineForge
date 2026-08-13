@@ -2,7 +2,7 @@
 # Shared utilities: admin check, styled console output, banner.
 
 function Test-IsAdministrator {
-    $Identity  = [Security.Principal.WindowsIdentity]::GetCurrent()
+    $Identity = [Security.Principal.WindowsIdentity]::GetCurrent()
     $Principal = [Security.Principal.WindowsPrincipal]$Identity
     return $Principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 }
@@ -27,13 +27,13 @@ function Write-Step {
         Skip    = 'DarkGray'
     }
 
-    $Prefixes = @{
-        Info    = '  >'
-        Success = '  ✓'
-        Warning = '  !'
-        Error   = '  ✗'
-        Skip    = '  -'
-    }
+$Prefixes = @{
+    Info    = '  >'
+    Success = '  [+]'
+    Warning = '  [!]'
+    Error   = '  [X]'
+    Skip    = '  [-]'
+}
 
     Write-Host "$($Prefixes[$Level]) " -ForegroundColor $Colors[$Level] -NoNewline
     Write-Host "[$Section] "          -ForegroundColor White             -NoNewline
@@ -43,7 +43,8 @@ function Write-Step {
     if (Get-Command -Name Write-Log -ErrorAction SilentlyContinue) {
         $LogMsg = if (Get-Command -Name Get-I18nLogMessage -ErrorAction SilentlyContinue) {
             Get-I18nLogMessage $Message
-        } else {
+        }
+        else {
             $Message
         }
         Write-Log -Level $Level.ToUpper() -Section $Section -Message $LogMsg
@@ -66,25 +67,15 @@ function Write-Banner {
     if (Get-Command -Name Write-Log -ErrorAction SilentlyContinue) {
         $LogTitle = if (Get-Command -Name Get-I18nLogMessage -ErrorAction SilentlyContinue) {
             Get-I18nLogMessage $Title
-        } else {
+        }
+        else {
             $Title
         }
         Write-Log -Level 'BANNER' -Section 'Banner' -Message $LogTitle
     }
 }
 
-function Initialize-DismModule {
-    if ($PSEdition -eq 'Core') {
-        Get-Module DISM | Remove-Module -Force -ErrorAction SilentlyContinue
-        Import-Module DISM -UseWindowsPowerShell -ErrorAction SilentlyContinue
-        return
-    }
-
-    Import-Module DISM -ErrorAction SilentlyContinue
-}
-
 Export-ModuleMember -Function `
     Test-IsAdministrator, `
     Write-Step, `
-    Write-Banner, `
-    Initialize-DismModule
+    Write-Banner
