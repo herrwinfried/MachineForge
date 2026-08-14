@@ -18,7 +18,7 @@ function Get-SystemInfo {
         OsBuild       = $null
         BoardVendor   = $null
         Model         = $null
-        ScriptVersion = "1.0.0"
+        ScriptVersion = "1.1.0"
     }
 
     $OS = Get-CimInstance Win32_OperatingSystem -ErrorAction SilentlyContinue

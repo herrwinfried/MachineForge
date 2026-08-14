@@ -10,7 +10,7 @@
   <strong>MachineForge</strong><br>
 </p>
 
-**Declarative workstation setup and provisioning automation 1.0.0.**
+**Declarative workstation setup and provisioning automation 1.1.0.**
 
 MachineForge originally started as a personal setup script to quickly provision and customize my own workstations. As the setup grew, it was modularized and decoupled so that configuration data (`.psd1`) could be separated from execution logic (`.psm1`), resulting in a clean, declarative automation tool that can be customized for different machines and environments.
 
@@ -143,7 +143,7 @@ cd machineforge
 For example:
 
 ```powershell
-git clone --branch v1.0.0-win https://gitlab.com/herrwinfried/machineforge.git
+git clone --branch v1.1.0-win https://gitlab.com/herrwinfried/machineforge.git
 cd machineforge
 ```
 
